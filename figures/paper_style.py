@@ -63,7 +63,7 @@ def save(fig, path, expect_width_in=None):
     target = expect_width_in or FULL_WIDTH_IN
     print(f"[paper_style] {path.name}: {w_in:.2f} in = {w_in * 2.54:.1f} cm @ {DPI} dpi")
     if abs(w_in - target) > 0.05:
-        print(f"[paper_style] 注意：宽度不是 {target} in，插入 Word 时会被缩放，字号会跟着变")
+        print(f"[paper_style] note: width is not {target} in; a figure inserted at another width is rescaled")
     return path
 
 
